@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>../images/icons/toolbar-remove.png</file>
+        <file>../images/icons/toolbar-remove_inverse.png</file>
+        <file>../images/icons/qgn_menu_am_midlet.png</file>
+    </qresource>
+    <qresource prefix="/backgrounds">
+        <file>../images/backgrounds/widget_belle00.png</file>
+        <file>../images/backgrounds/widget_belle01.png</file>
+        <file>../images/backgrounds/widget_belle01_mask.png</file>
+        <file>../images/backgrounds/statusbar.png</file>
+        <file>../images/backgrounds/statusbar_inverse.png</file>
+        <file>../images/backgrounds/toolbar.png</file>
+        <file>../images/backgrounds/toolbar_inverse.png</file>
+        <file>../images/backgrounds/wmp11.jpg</file>
+        <file>../images/backgrounds/wmp11_blur.jpg</file>
+        <file>../images/backgrounds/aurora00.jpg</file>
+        <file>../images/backgrounds/aurora00_blur.jpg</file>
+    </qresource>
+</RCC>
