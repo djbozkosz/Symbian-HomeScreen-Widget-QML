@@ -107,7 +107,6 @@ Window {
       clip: true;
       platformInverted: main.platformInverted;
       font {
-        family: platformStyle.fontFamilyRegular;
         pixelSize: platformStyle.fontSizeSmall + platformStyle.paddingSmall * 0.2;
       }
       anchors {

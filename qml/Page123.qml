@@ -31,10 +31,6 @@ Page {
         height: page123SwitchBg.height;
         verticalAlignment: Text.AlignVCenter;
         platformInverted: main.platformInverted;
-        font {
-          family: platformStyle.fontFamilyRegular;
-          pixelSize: platformStyle.fontSizeMedium;
-        }
       }
 
       Switch {
@@ -49,10 +45,6 @@ Page {
         height: page123SwitchSkin.height;
         verticalAlignment: Text.AlignVCenter;
         platformInverted: main.platformInverted;
-        font {
-          family: platformStyle.fontFamilyRegular;
-          pixelSize: platformStyle.fontSizeMedium;
-        }
       }
 
       Switch {
@@ -67,10 +59,6 @@ Page {
         height: page123Image.height;
         verticalAlignment: Text.AlignVCenter;
         platformInverted: main.platformInverted;
-        font {
-          family: platformStyle.fontFamilyRegular;
-          pixelSize: platformStyle.fontSizeMedium;
-        }
       }
 
       Image {
