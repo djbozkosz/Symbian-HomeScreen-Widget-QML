@@ -8,6 +8,10 @@ Window {
   platformInverted: false;
 
   property bool platformSymbian: false;
+  property string bg;
+  property string bgInverse;
+  property string bgBlur;
+  property string bgBlurInverse;
 
   Image {
     id: mainBackground;
@@ -99,16 +103,17 @@ Window {
     Label {
       id: mainStatusBarTitle;
       text: "Qml Sis Template";
-      height: parent.height;
       verticalAlignment: Text.AlignVCenter;
-      //platformInverted: main.platformInverted;
+      clip: true;
+      platformInverted: main.platformInverted;
       font {
         family: platformStyle.fontFamilyRegular;
-        pixelSize: platformStyle.fontSizeSmall + platformStyle.paddingSmall * 0.5;
+        pixelSize: platformStyle.fontSizeSmall + platformStyle.paddingSmall * 0.2;
       }
       anchors {
-        left: parent.left;
+        fill: parent;
         leftMargin: platformStyle.paddingSmall;
+        rightMargin: 190;
       }
     }
   }
@@ -137,15 +142,12 @@ Window {
 
 //------------------------------------------------------------------------------
   onOrientationChangeAboutToStart: onResize();
+  onPlatformInvertedChanged: onPlatformInverted();
 
   function initPage()
   {
     mainPageStack.replace(Qt.resolvedUrl("Page123.qml"));
-  }
-
-  function showMainToolBarMenu()
-  {
-    mainToolBarMenu.open();
+    onPlatformInverted();
   }
 
   function pageBack()
@@ -159,21 +161,77 @@ Window {
     mainPageStack.pop();
   }
 
-  function setBackground(bg, bgBlur)
+  function onResize()
   {
-    mainBackground.source = bg;
-    mainBackgroundStatus.source = bgBlur;
-    mainBackgroundToolBar.source = bgBlur;
+    mainPageStack.currentPage.onResize();
+  }
+
+  function onPlatformInverted()
+  {
+    var statusBg = platformInverted ? "qrc:/backgrounds/images/backgrounds/statusbar_inverse.png" : "qrc:/backgrounds/images/backgrounds/statusbar.png";
+    var statusTextColor = platformInverted ? platformStyle.colorNormalLightInverted : platformStyle.colorNormalLight;
+    var statusSignalLevel = platformInverted ? "qrc:/icons/images/icons/signal_level_bg_inverse.png" : "qrc:/icons/images/icons/signal_level_bg.png";
+    var statusSignalLevelFull = platformInverted ? "qrc:/icons/images/icons/signal_level_full_inverse.png" : "qrc:/icons/images/icons/signal_level_full.png";
+    var statusBatteryLevel = platformInverted ? (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_bg_inverse.png" : "qrc:/icons/images/icons/battery_level_bg_inverse.png") : (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_bg.png" : "qrc:/icons/images/icons/battery_level_bg.png");
+    var statusBatteryLevelFull = platformInverted ? (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_full_inverse.png" : "qrc:/icons/images/icons/battery_level_full_inverse.png") : (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_full_bg.png" : "qrc:/icons/images/icons/battery_level_full.png");
+    var statusBatteryPSM = platformInverted ? "qrc:/icons/images/icons/battery_psm_inverse.png" : "qrc:/icons/images/icons/battery_psm.png";
+
+    var toolBarBg = platformInverted ? "qrc:/backgrounds/images/backgrounds/toolbar_inverse.png" : "qrc:/backgrounds/images/backgrounds/toolbar.png";
+    var sb = platformSymbian ? mainStatusBar.children[0].children[0].children[0] : mainStatusBar.children[1];
+
+    sb.source = statusBg;
+    sb.children[0].indicatorColor = statusTextColor;
+    sb.children[1].color = statusTextColor;
+    sb.children[2].source = statusSignalLevel;
+    sb.children[2].children[0].children[0].source = statusSignalLevelFull;
+    sb.children[3].source = statusBatteryLevel;
+    sb.children[3].anchors.rightMargin = platformStyle.paddingLarge;
+    sb.children[3].children[0].children[0].source = statusBatteryLevelFull;
+    sb.children[3].children[1].source = statusBatteryPSM;
+    sb.children[4].color = statusTextColor;
+
+    mainToolBar.children[0].source = toolBarBg;
+
+    if(mainPageStack.currentPage)
+      mainPageStack.currentPage.tools.children[0].source = mainToolBar.children[0].source;
+
+    updateBackground();
+  }
+//------------------------------------------------------------------------------
+  function showMainToolBarMenu()
+  {
+    mainToolBarMenu.open();
+  }
+//------------------------------------------------------------------------------
+  function setBackground(bg2, bgInverse2, bgBlur2, bgBlurInverse2)
+  {
+    bg = bg2;
+    bgInverse = bgInverse2;
+    bgBlur = bgBlur2;
+    bgBlurInverse = bgBlurInverse2;
+
+    updateBackground();
+  }
+
+  function updateBackground()
+  {
+    if(platformInverted)
+    {
+      mainBackground.source = bgInverse;
+      mainBackgroundStatus.source = bgBlurInverse;
+      mainBackgroundToolBar.source = bgBlurInverse;
+    }
+    else
+    {
+      mainBackground.source = bg;
+      mainBackgroundStatus.source = bgBlur;
+      mainBackgroundToolBar.source = bgBlur;
+    }
   }
 
   function setPlatformSymbian(platform)
   {
     platformSymbian = platform;
-  }
-
-  function onResize()
-  {
-    mainPageStack.currentPage.onResize();
   }
 }
 //------------------------------------------------------------------------------

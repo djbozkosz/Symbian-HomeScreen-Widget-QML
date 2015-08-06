@@ -116,21 +116,8 @@ Page {
 
   onStatusChanged: {
     if(status === PageStatus.Activating)
-    {
-      var statusBg = "qrc:/backgrounds/images/backgrounds/statusbar.png";
-      var statusBgInverted = "qrc:/backgrounds/images/backgrounds/statusbar_inverse.png";
-      var toolBarBg = "qrc:/backgrounds/images/backgrounds/toolbar.png";
-      var toolBarInverted = "qrc:/backgrounds/images/backgrounds/toolbar_inverse.png";
-
-      main.setBackground("qrc:/backgrounds/images/backgrounds/aurora00.jpg", "qrc:/backgrounds/images/backgrounds/aurora00_blur.jpg");
-      if(main.platformSymbian)
-        mainStatusBar.children[0].children[0].children[0].source = main.platformInverted ? statusBgInverted : statusBg;
-      else
-        mainStatusBar.children[1].source = main.platformInverted ? statusBgInverted : statusBg;
-      page123ToolBar.children[0].source = main.platformInverted ? toolBarInverted : toolBarBg;
-    }
+      main.setBackground("qrc:/backgrounds/images/backgrounds/aurora00.jpg", "qrc:/backgrounds/images/backgrounds/aurora00_inverse.jpg", "qrc:/backgrounds/images/backgrounds/aurora00_blur.jpg", "qrc:/backgrounds/images/backgrounds/aurora00_blur_inverse.jpg");
   }
-
 //------------------------------------------------------------------------------
   function onResize()
   {

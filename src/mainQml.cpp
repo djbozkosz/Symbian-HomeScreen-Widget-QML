@@ -88,7 +88,7 @@ QImage CQmlView::composeWidgetImage()
   QImage i(":/backgrounds/images/backgrounds/widget_belle00.png");
   QPainter p(&i);
   QFont f(p.font());
-  QImage ii(":/icons/images/icons/qgn_menu_am_midlet.png");
+  QImage ii(":/icons/images/icons/icon_midlet.png");
   ii = ii.scaled(70, 70, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
   p.drawImage(6, 6, ii);
   f.setPointSize(13);
@@ -123,7 +123,7 @@ void CQmlView::widgetEvent(QHSEvent event)
     {
       widget->setItem(NHomeScreenWidget::ITEM_TEXT2, "Qml Sis Template Widget");
       widget->setItem(NHomeScreenWidget::ITEM_TEXT3, "www.djbozkosz.wz.cz");
-      widget->setItem(NHomeScreenWidget::ITEM_IMAGE1, QImage(":/icons/images/icons/qgn_menu_am_midlet.png"));
+      widget->setItem(NHomeScreenWidget::ITEM_IMAGE1, QImage(":/icons/images/icons/icon_midlet.png"));
       widget->publish();
     }
     else if(sender() == widget2)

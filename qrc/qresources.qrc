@@ -1,11 +1,28 @@
 <RCC>
     <qresource prefix="/icons">
+        <file>../images/icons/battery_level_bg.png</file>
+        <file>../images/icons/battery_level_bg_inverse.png</file>
+        <file>../images/icons/battery_level_full.png</file>
+        <file>../images/icons/battery_level_full_inverse.png</file>
+        <file>../images/icons/battery_level_low_inverse.png</file>
+        <file>../images/icons/battery_level_medium_inverse.png</file>
+        <file>../images/icons/battery_level_psm_bg.png</file>
+        <file>../images/icons/battery_level_psm_bg_inverse.png</file>
+        <file>../images/icons/battery_level_psm_full.png</file>
+        <file>../images/icons/battery_level_psm_full_inverse.png</file>
+        <file>../images/icons/battery_psm.png</file>
+        <file>../images/icons/battery_psm_inverse.png</file>
+        <file>../images/icons/signal_level_bg.png</file>
+        <file>../images/icons/signal_level_bg_inverse.png</file>
+        <file>../images/icons/signal_level_full.png</file>
+        <file>../images/icons/signal_level_full_inverse.png</file>
         <file>../images/icons/toolbar-remove.png</file>
         <file>../images/icons/toolbar-remove_inverse.png</file>
-        <file>../images/icons/qgn_menu_am_midlet.png</file>
+        <file>../images/icons/icon_midlet.png</file>
     </qresource>
     <qresource prefix="/backgrounds">
         <file>../images/backgrounds/widget_belle00.png</file>
+        <file>../images/backgrounds/widget_belle00_inverse.png</file>
         <file>../images/backgrounds/widget_belle01.png</file>
         <file>../images/backgrounds/widget_belle01_mask.png</file>
         <file>../images/backgrounds/statusbar.png</file>
@@ -15,6 +32,8 @@
         <file>../images/backgrounds/wmp11.jpg</file>
         <file>../images/backgrounds/wmp11_blur.jpg</file>
         <file>../images/backgrounds/aurora00.jpg</file>
+        <file>../images/backgrounds/aurora00_inverse.jpg</file>
         <file>../images/backgrounds/aurora00_blur.jpg</file>
+        <file>../images/backgrounds/aurora00_blur_inverse.jpg</file>
     </qresource>
 </RCC>

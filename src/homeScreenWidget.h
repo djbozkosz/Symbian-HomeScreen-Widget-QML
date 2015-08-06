@@ -1,8 +1,8 @@
 //------------------------------------------------------------------------------
-#ifndef HomeScreenWIDGET_H
-#define HomeScreenWIDGET_H
+#ifndef HOMESCREENWIDGET_H
+#define HOMESCREENWIDGET_H
 
-// version 2015.07.26
+// version 2015.07.28
 
 #include <QObject>
 #include <QString>
@@ -249,4 +249,4 @@ inline void CHomeScreenWidget::setItem(NHomeScreenWidget::EItemType item, const 
 #endif
 }
 //-----------------------------------------------------------------------------
-#endif // HomeScreenWIDGET_H
+#endif // HOMESCREENWIDGET_H
