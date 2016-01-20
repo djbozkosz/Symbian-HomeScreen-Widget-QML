@@ -172,7 +172,7 @@ Window {
     var statusSignalLevel = platformInverted ? "qrc:/icons/images/icons/signal_level_bg_inverse.png" : "qrc:/icons/images/icons/signal_level_bg.png";
     var statusSignalLevelFull = platformInverted ? "qrc:/icons/images/icons/signal_level_full_inverse.png" : "qrc:/icons/images/icons/signal_level_full.png";
     var statusBatteryLevel = platformInverted ? (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_bg_inverse.png" : "qrc:/icons/images/icons/battery_level_bg_inverse.png") : (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_bg.png" : "qrc:/icons/images/icons/battery_level_bg.png");
-    var statusBatteryLevelFull = platformInverted ? (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_full_inverse.png" : "qrc:/icons/images/icons/battery_level_full_inverse.png") : (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_full_bg.png" : "qrc:/icons/images/icons/battery_level_full.png");
+    var statusBatteryLevelFull = platformInverted ? (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_full_inverse.png" : "qrc:/icons/images/icons/battery_level_full_inverse.png") : (privateBatteryInfo.powerSaveModeEnabled ? "qrc:/icons/images/icons/battery_level_psm_full.png" : "qrc:/icons/images/icons/battery_level_full.png");
     var statusBatteryPSM = platformInverted ? "qrc:/icons/images/icons/battery_psm_inverse.png" : "qrc:/icons/images/icons/battery_psm.png";
 
     var toolBarBg = platformInverted ? "qrc:/backgrounds/images/backgrounds/toolbar_inverse.png" : "qrc:/backgrounds/images/backgrounds/toolbar.png";
