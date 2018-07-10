@@ -1,5 +1,5 @@
 ## Description
-<img src="http://s21.postimg.org/gcakweiif/scr_95.jpg" alt="![Template dark - landscape" height="100" align="right">
+<img src="https://s21.postimg.cc/gcakweiif/scr_95.jpg" alt="![Template dark - landscape" height="100" align="right">
 Homescreen widget template for Symbian v5, Anna, Belle using Qt 4.7.4, QML, C++.
 
 ## Features
@@ -29,9 +29,9 @@ For adding new capabilities please use SisContents application: Open sis install
 
 ## Images
 Widgets and application template:  
-<img src="http://s21.postimg.org/broehgyt3/scr_98.jpg" alt="Template widgets" width="200">
-<img src="http://s21.postimg.org/j53sgfiuv/scr_94.jpg" alt="![Template dark - portrait" width="200">
-<img src="http://s21.postimg.org/6dkkct2rb/scr_96.jpg" alt="![Template light - portrait" width="200">
+<img src="https://s21.postimg.cc/broehgyt3/scr_98.jpg" alt="Template widgets" width="200">
+<img src="https://s21.postimg.cc/j53sgfiuv/scr_94.jpg" alt="![Template dark - portrait" width="200">
+<img src="https://s21.postimg.cc/6dkkct2rb/scr_96.jpg" alt="![Template light - portrait" width="200">
 
-<img src="http://s21.postimg.org/gcakweiif/scr_95.jpg" alt="![Template dark - landscape" width="300">
-<img src="http://s21.postimg.org/o2cb4feif/scr_97.jpg" alt="![Template light - landscape" width="300">
+<img src="https://s21.postimg.cc/gcakweiif/scr_95.jpg" alt="![Template dark - landscape" width="300">
+<img src="https://s21.postimg.cc/o2cb4feif/scr_97.jpg" alt="![Template light - landscape" width="300">
